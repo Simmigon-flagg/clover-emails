@@ -4,7 +4,7 @@
       "id": "1",
       "title": "Weekly Newsletter - TechBytes",
       "date": "2025-07-30T08:15:00",
-      "fav": false
+      "fav": true
     },
     {
       "id": "2",
@@ -22,7 +22,7 @@
       "id": "4",
       "title": "Reminder: Your subscription is expiring",
       "date": "2025-07-27T09:00:00",
-      "fav": true
+      "fav": false
     },
     {
       "id": "5",
@@ -64,7 +64,7 @@
       "id": "11",
       "title": "System Alert: Production Downtime",
       "date": "2025-07-20T01:35:00",
-      "fav": true
+      "fav": false
     },
     {
       "id": "12",
