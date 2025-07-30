@@ -4,19 +4,19 @@
       "id": "1",
       "title": "Weekly Newsletter - TechBytes",
       "date": "2025-07-30T08:15:00",
-      "fav": true
+      "fav": false
     },
     {
       "id": "2",
       "title": "Invoice for July Hosting Services",
       "date": "2025-07-29T14:22:00",
-      "fav": true
+      "fav": false
     },
     {
       "id": "3",
       "title": "Job Opportunity: Frontend Developer at ByteCore",
       "date": "2025-07-28T10:45:00",
-      "fav": true
+      "fav": false
     },
     {
       "id": "4",
@@ -34,7 +34,7 @@
       "id": "6",
       "title": "Team Outing Photos",
       "date": "2025-07-25T16:30:00",
-      "fav": false
+      "fav": true
     },
     {
       "id": "7",
@@ -46,7 +46,7 @@
       "id": "8",
       "title": "Google Calendar: Upcoming Meeting Invite",
       "date": "2025-07-23T12:00:00",
-      "fav": false
+      "fav": true
     },
     {
       "id": "9",

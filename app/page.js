@@ -9,6 +9,9 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [emails, setEmails] = useState([]);
   const [fetchError, setFetchError] = useState(null);
+  const ITEMS_PER_PAGE = 5;
+  const [currentPage, setCurrentPage] = useState(1);
+
 
   useEffect(() => {
     const fetchEmails = async () => {
@@ -27,40 +30,47 @@ export default function Home() {
     fetchEmails();
   }, []);
 
-const handleToggle = async (id, email) => {
-  const updatedEmail = { ...email, fav: !email.fav };
+  const handleToggle = async (id, email) => {
+    const updatedEmail = { ...email, fav: !email.fav };
 
-  try {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedEmail),
-    });
+    try {
+      const response = await fetch(`${API_URL}/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedEmail),
+      });
 
-    if (!response.ok) throw new Error("Failed to update Fav");
+      if (!response.ok) throw new Error("Failed to update Fav");
 
-    const updated = await response.json();
-    console.log("Updated email:", updated);
+      const updated = await response.json();
+      console.log("Updated email:", updated);
 
-    // Update local state immediately
-    setEmails((prev) =>
-      prev.map((e) => (e.id === id ? { ...e, fav: updated.fav } : e))
-    );
-         setFetchError(null)
-        } catch (err) {
-          console.error("Toggle failed:", err);
-          setFetchError(err.message)
-  }
-};
+      setEmails((prev) =>
+        prev.map((email) => (email.id === id ? { ...email, fav: updated.fav } : email))
+      );
+      setFetchError(null)
+    } catch (err) {
+      console.error("Toggle failed:", err);
+      setFetchError(err.message)
+    }
+  };
 
 
   const filteredEmails = useMemo(() => {
+    const q = query.toLowerCase();
     return emails.filter((email) =>
-      email.title.toLowerCase().includes(query.toLowerCase())
+      email.title.toLowerCase().includes(q) || email.date.toLowerCase().includes(q)
     );
   }, [query, emails]);
+
+
+  const paginatedEmails = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredEmails.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filteredEmails, currentPage]);
+
 
   return (
     <div className="max-w-xl mx-auto p-6">
@@ -79,15 +89,15 @@ const handleToggle = async (id, email) => {
       {fetchError && <p className="text-red-600">{`Error: ${fetchError}`}</p>}
       {/* Filtered List */}
       {!fetchError && <ul className="space-y-2 text-black">
-        {filteredEmails.length > 0 ? (
-          filteredEmails.map((email) => (
+        {paginatedEmails.length > 0 ? (
+          paginatedEmails.map((email) => (
             <li
               key={email.id}
               className="flex items-center justify-between px-4 py-2 bg-gray-100 rounded hover:bg-gray-200"
             >
               <div>
                 <p className="font-medium">{email.title}</p>
-                <p className="text-sm text-gray-600">{email.date}</p>
+                <p className="text-sm text-gray-600">{new Date(email.date).toLocaleString()}</p>
               </div>
               <div className="ml-4">
                 {email.fav ? (
@@ -99,10 +109,31 @@ const handleToggle = async (id, email) => {
             </li>
           ))
         ) : (
-
           <li className="text-gray-500">No results found.</li>
         )}
       </ul>}
+      <div className="flex justify-center gap-4 mt-4">
+        <button
+          className="px-3 py-1 bg-blue-500 text-white rounded disabled:opacity-50"
+          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        <button
+          className="px-3 py-1 bg-blue-500 text-white rounded disabled:opacity-50"
+          onClick={() =>
+            setCurrentPage((prev) =>
+              prev < Math.ceil(filteredEmails.length / ITEMS_PER_PAGE)
+                ? prev + 1
+                : prev
+            )
+          }
+          disabled={currentPage >= Math.ceil(filteredEmails.length / ITEMS_PER_PAGE)}
+        >
+          Next
+        </button>
+      </div>
 
     </div>
   );
