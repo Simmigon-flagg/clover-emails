@@ -23,4 +23,4 @@ A React front-end for browsing emails with search, date range filter, pagination
    npm run database
    ```
 
-2. Navigate to http://localhost:4000/ to see that database contents
+2. Navigate to http://localhost:4000/ to see the database contents
