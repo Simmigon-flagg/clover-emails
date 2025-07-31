@@ -10,7 +10,7 @@
       "id": "2",
       "title": "Invoice for July Hosting Services",
       "date": "2025-07-29T14:22:00",
-      "fav": false
+      "fav": true
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "id": "4",
       "title": "Reminder: Your subscription is expiring",
       "date": "2025-07-27T09:00:00",
-      "fav": false
+      "fav": true
     },
     {
       "id": "5",
@@ -40,13 +40,13 @@
       "id": "7",
       "title": "Welcome to DevCircle!",
       "date": "2025-07-24T08:05:00",
-      "fav": true
+      "fav": false
     },
     {
       "id": "8",
       "title": "Google Calendar: Upcoming Meeting Invite",
       "date": "2025-07-23T12:00:00",
-      "fav": true
+      "fav": false
     },
     {
       "id": "9",
@@ -94,7 +94,7 @@
       "id": "16",
       "title": "Security Alert: New login from MacOS",
       "date": "2025-07-15T20:20:00",
-      "fav": true
+      "fav": false
     },
     {
       "id": "17",
@@ -106,18 +106,144 @@
       "id": "18",
       "title": "New Comment on PR #442",
       "date": "2025-07-13T17:25:00",
-      "fav": true
+      "fav": false
     },
     {
       "id": "19",
       "title": "Lunch Order Confirmation",
       "date": "2025-07-12T11:40:00",
-      "fav": false
+      "fav": true
     },
     {
       "id": "20",
       "title": "GitHub Weekly Digest",
       "date": "2025-07-11T05:30:00",
+      "fav": false
+    },
+    {
+      "id": "21",
+      "title": "DevOps Monthly Roundup",
+      "date": "2025-07-10T14:10:00",
+      "fav": false
+    },
+    {
+      "id": "22",
+      "title": "Welcome to CodeStream!",
+      "date": "2025-07-09T09:00:00",
+      "fav": true
+    },
+    {
+      "id": "23",
+      "title": "Your Amazon Order Has Shipped",
+      "date": "2025-07-08T16:45:00",
+      "fav": false
+    },
+    {
+      "id": "24",
+      "title": "Re: Feedback on UI Wireframes",
+      "date": "2025-07-07T11:35:00",
+      "fav": true
+    },
+    {
+      "id": "25",
+      "title": "Invitation to join Product Beta",
+      "date": "2025-07-06T13:20:00",
+      "fav": false
+    },
+    {
+      "id": "26",
+      "title": "Standup Summary - July 5",
+      "date": "2025-07-05T10:00:00",
+      "fav": true
+    },
+    {
+      "id": "27",
+      "title": "Monthly Performance Dashboard",
+      "date": "2025-07-04T08:30:00",
+      "fav": true
+    },
+    {
+      "id": "28",
+      "title": "Security Tip: Use 2FA",
+      "date": "2025-07-03T07:10:00",
+      "fav": false
+    },
+    {
+      "id": "29",
+      "title": "Welcome to API Academy",
+      "date": "2025-07-02T09:25:00",
+      "fav": true
+    },
+    {
+      "id": "30",
+      "title": "Re: Code Review Needed - Feature 102",
+      "date": "2025-07-01T17:40:00",
+      "fav": false
+    },
+    {
+      "id": "31",
+      "title": "July Sprint Planning Notes",
+      "date": "2025-06-30T12:00:00",
+      "fav": true
+    },
+    {
+      "id": "32",
+      "title": "System Maintenance Scheduled",
+      "date": "2025-06-29T06:45:00",
+      "fav": false
+    },
+    {
+      "id": "33",
+      "title": "New GitHub Issue Assigned",
+      "date": "2025-06-28T14:30:00",
+      "fav": true
+    },
+    {
+      "id": "34",
+      "title": "Reminder: Team Check-In at 10 AM",
+      "date": "2025-06-27T07:00:00",
+      "fav": true
+    },
+    {
+      "id": "35",
+      "title": "Webinar Registration Confirmed",
+      "date": "2025-06-26T15:00:00",
+      "fav": false
+    },
+    {
+      "id": "36",
+      "title": "Slack Notification Summary",
+      "date": "2025-06-25T13:10:00",
+      "fav": true
+    },
+    {
+      "id": "37",
+      "title": "Bug Fix Deployed: Ticket #321",
+      "date": "2025-06-24T19:25:00",
+      "fav": true
+    },
+    {
+      "id": "38",
+      "title": "Welcome to the Open Source Contributor Group",
+      "date": "2025-06-23T09:45:00",
+      "fav": true
+    },
+    {
+      "id": "39",
+      "title": "Your LinkedIn Weekly Stats",
+      "date": "2025-06-22T08:00:00",
+      "fav": false
+    },
+    {
+      "id": "40",
+      "title": "Billing Reminder: Cloud Storage",
+      "date": "2025-06-21T07:20:00",
+      "fav": true
+    },
+    {
+      "id": "41",
+      "title": "Simmigon Flagg",
+      "date": "2025-06-21T07:20:00",
       "fav": false
     }
   ]
