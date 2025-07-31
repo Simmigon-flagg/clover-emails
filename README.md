@@ -8,7 +8,7 @@ A React front-end for browsing emails with search, date range filter, pagination
 
 1. Open a terminal and run 
    ```bash
-   Run npm install && npm run dev to start the code
+   npm install && npm run dev to start the code
 
 2. Navigate to http://localhost:3000/
 
@@ -21,3 +21,6 @@ A React front-end for browsing emails with search, date range filter, pagination
  Run npm run database
    ```bash
    npm run database
+   ```
+
+2. Navigate to http://localhost:4000/ to see that database contents
